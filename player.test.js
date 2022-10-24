@@ -34,4 +34,5 @@ test('Consultar el sexo de una persona pero no ', () => {
   const player1 = new Player('Pepe', 'female', '23/12/2000');
   const date1 = new Date(2000, 12, 23);
   expect(player1.birthday).toEqual(date1);
+  
 });
