@@ -34,5 +34,20 @@ test('Consultar el sexo de una persona pero no ', () => {
   const player1 = new Player('Pepe', 'female', '23/12/2000');
   const date1 = new Date(2000, 12, 23);
   expect(player1.birthday).toEqual(date1);
-  
+});
+
+test('Ver la edad actual del jugador', () => {
+  const player1 = new Player('Pepe', 'female', '13/12/2000');
+  expect(player1.age).toEqual(21);
+});
+
+test('Ver la category del jugador', () => {
+  const player1 = new Player('Pepe', 'female', '13/12/2000');
+  const player2 = new Player('Pepe', 'male', '13/11/2004');
+  const player3 = new Player('Pepe', 'female', '13/12/2007');
+  const player4 = new Player('Pepe', 'female', '01/01/2015');
+  expect(player1.category).toBe('Senior');
+  expect(player2.category).toBe('Junior');
+  expect(player3.category).toBe('Cadet');
+  expect(player4.category).toBe('Benjamin');
 });
